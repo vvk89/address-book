@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="lu.jemmic.addressbook.view.CommandLineTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-06-12T21:47:54" hostname="APM3LC02CJ4E9MD6T" time="0.018">
+<testsuite name="lu.jemmic.addressbook.view.CommandLineTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-06-12T22:34:53" hostname="APM3LC02CJ4E9MD6T" time="0.046">
   <properties/>
-  <testcase name="testCreateContact" classname="lu.jemmic.addressbook.view.CommandLineTest" time="0.018">
-    <failure message="java.util.NoSuchElementException" type="java.util.NoSuchElementException">java.util.NoSuchElementException
-	at java.base/java.util.Scanner.throwFor(Scanner.java:937)
-	at java.base/java.util.Scanner.next(Scanner.java:1478)
-	at lu.jemmic.addressbook.view.CommandLine.getString(CommandLine.java:71)
-	at lu.jemmic.addressbook.view.CommandLine.getStringField(CommandLine.java:302)
-	at lu.jemmic.addressbook.view.CommandLine.createContact(CommandLine.java:371)
-	at lu.jemmic.addressbook.view.CommandLineTest.testCreateContact(CommandLineTest.java:66)
+  <testcase name="testEditContact" classname="lu.jemmic.addressbook.view.CommandLineTest" time="0.046">
+    <failure message="java.lang.UnsupportedOperationException" type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException
+	at java.base/java.util.ImmutableCollections.uoe(ImmutableCollections.java:71)
+	at java.base/java.util.ImmutableCollections$AbstractImmutableMap.put(ImmutableCollections.java:714)
+	at lu.jemmic.addressbook.view.CommandLine.editContact(CommandLine.java:419)
+	at lu.jemmic.addressbook.view.CommandLineTest.testEditContact(CommandLineTest.java:92)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -57,7 +55,14 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <system-out><![CDATA[Please fill this form
-Name:Surname:]]></system-out>
+  <system-out><![CDATA[	1) Name : null
+	2) Surname : null
+	3) Telephone number : null
+	4) Email : null
+	5) Age : 
+	6) Hair color : 
+	7) Type of category : 
+	8) Quit
+Please select the field to edit:You have to choose an number between 1 and 8.You have to choose an number between 1 and 8.You have to choose an number between 1 and 8.You have to choose an number between 1 and 8.You have to choose an number between 1 and 8.You have to choose an number between 1 and 8.You have to choose an number between 1 and 8.Telephone number:]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -18,6 +18,8 @@
 *.tar
 *.zip
 AddressBook1.gradle
+AddressBook1.build
+*.gradle
 
 # Logs and databases #
 *.log
