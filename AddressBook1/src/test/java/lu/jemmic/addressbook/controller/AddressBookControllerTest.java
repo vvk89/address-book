@@ -131,6 +131,7 @@ public class AddressBookControllerTest {
 		//addressBookController.mainProcess();
 	}
 
+	// ToDO need to check how to break for next choice option to test it
 	@Test
 	public void testMainProcessForDeleteContact() {
 		when(commandLine.displayMainMenu()).thenReturn(AddressBookController.MainMenuSelection.ADD_CONTACT);
