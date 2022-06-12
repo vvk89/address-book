@@ -49,7 +49,7 @@ public class AddressBookControllerTest {
 			System.out.println("Started testDisplayListContacts");
 			
 			AddressBookController c = new AddressBookController();
-			c.mainProcess();
+			//c.mainProcess();
 			
 			//invoke the private method "displayListContacts"
 			Method methodDisp = c.getClass().getDeclaredMethod("displayListContacts", null);
