@@ -127,7 +127,7 @@ public class AddressBookTest {
 			
 			c = b.getContact(contact.getName() + " " + contact.getSurname());
 			
-			Assert.assertNotNull("Delete contact failed", c);
+			Assert.assertNull("Delete contact failed", c);
 			
 			
 			System.out.println("completed testDeleteContact");
