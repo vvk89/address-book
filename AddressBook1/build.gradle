@@ -36,10 +36,10 @@ dependencies {
 	// Use a test framework
 	//testImplementation 'x:y:1.2.3'
 	testImplementation group: 'junit', name: 'junit', version: '4.12'
-	//testImplementation group: 'org.mockito', name: 'mockito-core', version: '4.6.1'
-	testImplementation group: 'org.mockito', name: 'mockito-core', version: '1.10.8'
-	//testImplementation group: 'org.powermock', name: 'powermock-core', version: '2.0.9'	
-	testImplementation group: 'org.powermock', name: 'powermock-mockito-release-full', version: '1.6.4'
-	//testImplementation group: 'org.mockito', name: 'mockito-all', version: '1.10.8'
-	
+	testImplementation group: 'org.mockito', name: 'mockito-core', version: '4.6.1'
+	//testImplementation group: 'org.mockito', name: 'mockito-core', version: '1.10.8'
+	//testImplementation group: 'org.powermock', name: 'powermock-core', version: '2.0.9'
+	//testImplementation group: 'org.powermock', name: 'powermock-mockito-release-full', version: '1.6.4'
+    testImplementation group: 'org.powermock', name: 'powermock-module-junit4', version: '2.0.0-beta.5'
+    testImplementation group: 'org.powermock', name: 'powermock-api-mockito2', version: '2.0.0-beta.5'
 }
