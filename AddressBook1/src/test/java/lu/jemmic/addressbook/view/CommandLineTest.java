@@ -14,9 +14,11 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 
 import java.io.ByteArrayInputStream;
+import java.util.HashMap;
 import java.util.Map;
 
 import static org.mockito.Mockito.when;
@@ -71,9 +73,9 @@ public class CommandLineTest {
         commandLine.displayContactDetail(new Contact());
     }
 
-    // ToDo powermockito for secure random need to be added.
-    @Ignore
+    @Test
     public void testEditContact() {
+        System.setIn(new ByteArrayInputStream("2\n".getBytes()));
         String userInput = String.format("Dan%sVega%s0687687989%sdanvega@gmail.com%s32%sBlack%sCategoryFamily%s3%sy%sy",
                 System.lineSeparator(),
                 System.lineSeparator(),
@@ -86,11 +88,16 @@ public class CommandLineTest {
                 System.lineSeparator());
         ByteArrayInputStream bais = new ByteArrayInputStream(userInput.getBytes());
         System.setIn(bais);
-        Map<AddressBookController.ContactData, String> contactDataStringMap = Map.of(AddressBookController.ContactData.NAME, "Vivek",
-                AddressBookController.ContactData.SURNAME, "V", AddressBookController.ContactData.TELEPHONE_NUMBER, "0685554341",
-                AddressBookController.ContactData.EMAIL, "B@GMAIL.COM",
-                AddressBookController.ContactData.AGE, "35", AddressBookController.ContactData.HAIR_COLOR, "BLACK", AddressBookController.ContactData.CATEGORY_TYPE, "CategoryFamily");
-        when(contact.getCategory()).thenReturn(new Category());
+        System.setIn(new ByteArrayInputStream("8\n".getBytes()));
+        Map<AddressBookController.ContactData, String> contactDataStringMap = new HashMap<>();
+        contactDataStringMap.put(AddressBookController.ContactData.NAME, "Vivek");
+        contactDataStringMap.put(AddressBookController.ContactData.SURNAME, "V");
+        contactDataStringMap.put(AddressBookController.ContactData.TELEPHONE_NUMBER, "0685554341");
+        contactDataStringMap.put(AddressBookController.ContactData.EMAIL, "B@GMAIL.COM");
+        contactDataStringMap.put(AddressBookController.ContactData.AGE, "35");
+        contactDataStringMap.put(AddressBookController.ContactData.HAIR_COLOR, "BLACK");
+        contactDataStringMap.put(AddressBookController.ContactData.CATEGORY_TYPE, "CategoryFamily");
+        PowerMockito.when(contact.getCategory()).thenReturn(new Category());
         commandLine.editContact(new Contact(), contactDataStringMap);
     }
 }
